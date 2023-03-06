@@ -34,7 +34,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 250px;
+    gap: 230px;
 }
 
 .mainContainerDiv {
@@ -154,7 +154,7 @@ button {
 .shinyDivs {
     width: 65px;
     height: 28px;
-    background-color: 18171F;
+    background-color: #18171F;
     display: flex;
     justify-content: space-between;
 }
