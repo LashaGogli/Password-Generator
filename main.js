@@ -164,7 +164,7 @@ fourthcheckbox.addEventListener("click", function () {
 });
 
 let rangeInput = document.querySelector("#rangeInput");
-let charLength=0;
+let charLength = 0;
 let span0 = document.querySelector(".span0");
 
 
@@ -187,7 +187,9 @@ function generatePassword(length) {
     let checkSymbols = 0;
     let password = "";
 
-  
+
+    do {
+        password="";
         for (let i = 0; i < length; i++) {
 
             const randomCharType = Math.floor(Math.random() * 4);
@@ -205,7 +207,8 @@ function generatePassword(length) {
                 checkSymbols++;
             }
         }
-   
+    } while (checkUppercase == 0 || checkLowcase == 0 || checkNumbers == 0 || checkSymbols == 0);
+
 
     return password;
 
