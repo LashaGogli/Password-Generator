@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Manrope:wght@800&family=Rubik&family=Space+Mono&display=swap');
+
+.container {
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: #24232C;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 24px;
+}
+
+h1 {
+    width: 260px;
+    height: 32px;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: #817D92;
+}
+.passwordDiv{
+    max-width: 540px;
+    width: 100%;
+    height: 80px;
+    background-color: red;
+}
+.mainContainerDiv{
+    max-width: 540px;
+    width: 100%;
+    height: 528px;
+    background-color: blue;
+}
