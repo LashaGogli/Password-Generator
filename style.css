@@ -4,7 +4,7 @@
     max-width: 100vw;
     width: 100%;
     height: 100vh;
-    background-color: #24232C;
+    background-color: #08070B;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -25,15 +25,72 @@ h1 {
     text-align: center;
     color: #817D92;
 }
-.passwordDiv{
+
+.passwordDiv {
     max-width: 540px;
     width: 100%;
     height: 80px;
-    background-color: red;
+    background-color: #24232C;
 }
-.mainContainerDiv{
+
+.mainContainerDiv {
     max-width: 540px;
     width: 100%;
     height: 528px;
+    background-color: #24232C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insidemaincontainer {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.charachterlengthDiv {
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+
+input[type='range'] {
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #18171F;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 8px;
+    margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: red;
+    border-radius: 50%;
+    margin-top: -6px;
+
+}
+.includeDiv{
+    width: 100%;
+    height: 152px;
     background-color: blue;
+}
+.stregthDiv{
+    width: 100%;
+    height: 72px;
+    background-color: aqua;
+}
+button{
+    width: 100%;
+    height: 65px;
+    background-color: #A4FFAF;
 }
