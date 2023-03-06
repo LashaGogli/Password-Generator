@@ -1,45 +1,3 @@
-function generatePassword(length) {
-    const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
-    const numbers = "0123456789";
-    const symbols = "!@#$%^&*()_+{}[]|;:',.<>/?";
-    let checkUppercase = 0;
-    let checkLowcase = 0;
-    let checkNumbers = 0;
-    let checkSymbols = 0;
-    let password = "";
-
-    do {
-        for (let i = 0; i < length; i++) {
-
-            const randomCharType = Math.floor(Math.random() * 4);
-            if (randomCharType === 0) {
-                password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
-                checkUppercase++;
-            } else if (randomCharType === 1) {
-                password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
-                checkLowcase++;
-            } else if (randomCharType === 2) {
-                password += numbers.charAt(Math.floor(Math.random() * numbers.length));
-                checkNumbers++;
-            } else {
-                password += symbols.charAt(Math.floor(Math.random() * symbols.length));
-                checkSymbols++;
-            }
-        }
-    } while (checkUppercase == 0 || checkLowcase == 0 || checkNumbers == 0 || checkSymbols == 0);
-
-    return password;
-
-}
-
-
-const password = generatePassword(12);
-console.log(password);
-
-
-
-
 
 let firstcheckbox = document.querySelector("#firstcheckbox");
 div1 = document.querySelector("#div1");
@@ -75,7 +33,7 @@ firstcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
 
-    }else if (countstrength == 3) {
+    } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
@@ -113,7 +71,7 @@ secondcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
 
-    }else if (countstrength == 3) {
+    } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
@@ -151,7 +109,7 @@ thirdcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
 
-    }else if (countstrength == 3) {
+    } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
@@ -189,7 +147,7 @@ fourthcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
 
-    }else if (countstrength == 3) {
+    } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
@@ -205,9 +163,64 @@ fourthcheckbox.addEventListener("click", function () {
     }
 });
 
+let rangeInput = document.querySelector("#rangeInput");
+let charLength=0;
+let span0 = document.querySelector(".span0");
+
+
+rangeInput.addEventListener("input", function () {
+    charLength = rangeInput.value;
+    span0.innerHTML = charLength;
+});
 
 
 
 
+function generatePassword(length) {
+    const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*()_+{}[]|;:',.<>/?";
+    let checkUppercase = 0;
+    let checkLowcase = 0;
+    let checkNumbers = 0;
+    let checkSymbols = 0;
+    let password = "";
 
+  
+        for (let i = 0; i < length; i++) {
+
+            const randomCharType = Math.floor(Math.random() * 4);
+            if (randomCharType === 0) {
+                password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                checkUppercase++;
+            } else if (randomCharType === 1) {
+                password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                checkLowcase++;
+            } else if (randomCharType === 2) {
+                password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                checkNumbers++;
+            } else {
+                password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                checkSymbols++;
+            }
+        }
+   
+
+    return password;
+
+}
+
+
+
+
+let generate = document.querySelector(".generate");
+let defaultpassword = document.querySelector(".defaultpassword");
+
+
+
+generate.addEventListener("click", function () {
+    password = generatePassword(charLength);
+    defaultpassword.innerHTML = password;
+})
 
