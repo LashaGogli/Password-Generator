@@ -34,7 +34,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .mainContainerDiv {
@@ -104,7 +104,7 @@ input[type='range']::-webkit-slider-thumb {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 260px;
+    /* gap: 260px; */
 }
 
 button {
@@ -227,6 +227,25 @@ input[type="checkbox"]:checked::before {
     opacity: 0.25;
     padding-left: 25px;
 }
-.copyicon{
+
+.copyicon {
     padding-right: 28px;
+}
+
+.strengthcheckdiv {
+    width: 130px;
+    height: 32px;
+    /* background-color: white; */
+    margin-right: -75px;
+}
+
+.strengthcheckP {
+    height: 32px;
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: right;
+    color: #E6E5EA;
 }

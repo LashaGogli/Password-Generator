@@ -9,6 +9,8 @@ let fourthcheckbox = document.querySelector("#fourthcheckbox");
 div4 = document.querySelector("#div4");
 
 let countstrength = 0;
+let strengthcheckdiv = document.querySelector(".strengthcheckdiv");
+let strengthcheckP = document.querySelector(".strengthcheckP");
 
 
 firstcheckbox.addEventListener("click", function () {
@@ -20,24 +22,29 @@ firstcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "";
+        
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "TOO WEAK!";
 
     } else if (countstrength == 2) {
         div1.style.backgroundColor = "#FB7C58";
         div2.style.backgroundColor = "#FB7C58";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "WEAK";
 
     } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "MEDIUM";
 
     }
     else if (countstrength == 4) {
@@ -45,6 +52,8 @@ firstcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#A4FFAF";
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
+        strengthcheckP.innerHTML = "STRONG";
+        
 
     }
 
@@ -58,24 +67,29 @@ secondcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "";
+        
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "TOO WEAK!";
 
     } else if (countstrength == 2) {
         div1.style.backgroundColor = "#FB7C58";
         div2.style.backgroundColor = "#FB7C58";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "WEAK";
 
     } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "MEDIUM";
 
     }
     else if (countstrength == 4) {
@@ -83,9 +97,10 @@ secondcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#A4FFAF";
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
+        strengthcheckP.innerHTML = "STRONG";
+        
 
     }
-
 });
 thirdcheckbox.addEventListener("click", function () {
     if (thirdcheckbox.checked) {
@@ -96,24 +111,29 @@ thirdcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "";
+        
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "TOO WEAK!";
 
     } else if (countstrength == 2) {
         div1.style.backgroundColor = "#FB7C58";
         div2.style.backgroundColor = "#FB7C58";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "WEAK";
 
     } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "MEDIUM";
 
     }
     else if (countstrength == 4) {
@@ -121,6 +141,8 @@ thirdcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#A4FFAF";
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
+        strengthcheckP.innerHTML = "STRONG";
+        
 
     }
 
@@ -134,24 +156,29 @@ fourthcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "";
+        
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
         div2.style.backgroundColor = "#18171F";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "TOO WEAK!";
 
     } else if (countstrength == 2) {
         div1.style.backgroundColor = "#FB7C58";
         div2.style.backgroundColor = "#FB7C58";
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "WEAK";
 
     } else if (countstrength == 3) {
         div1.style.backgroundColor = "#F8CD65";
         div2.style.backgroundColor = "#F8CD65";
         div3.style.backgroundColor = "#F8CD65";
         div4.style.backgroundColor = "#18171F";
+        strengthcheckP.innerHTML = "MEDIUM";
 
     }
     else if (countstrength == 4) {
@@ -159,6 +186,8 @@ fourthcheckbox.addEventListener("click", function () {
         div2.style.backgroundColor = "#A4FFAF";
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
+        strengthcheckP.innerHTML = "STRONG";
+        
 
     }
 });
