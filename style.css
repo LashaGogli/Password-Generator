@@ -228,7 +228,7 @@ input[type="checkbox"]:checked::before {
     mix-blend-mode: normal;
     opacity: 0.25;
     padding-left: 25px;
-    background-color: black;
+    background-color: #24232C;
     position: absolute;
     border: none;
 }

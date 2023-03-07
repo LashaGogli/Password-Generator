@@ -550,6 +550,8 @@ let defaultpassword = document.querySelector(".defaultpassword");
 generate.addEventListener("click", function () {
     password = generatePassword(charLength);
     defaultpassword.value = password;
+    defaultpassword.style.opacity = "1";
+    defaultpassword.style.backgroundColor = "#24232C";
 
 })
 
@@ -564,5 +566,5 @@ let copyicon = document.querySelector(".copyicon");
 copyicon.addEventListener("click", function () {
     defaultpassword.select();
     navigator.clipboard.writeText(defaultpassword.value);
-  });
+});
 
