@@ -32,9 +32,9 @@ h1 {
     height: 80px;
     background-color: #24232C;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 230px;
+   
 }
 
 .mainContainerDiv {
@@ -225,4 +225,8 @@ input[type="checkbox"]:checked::before {
     color: #E6E5EA;
     mix-blend-mode: normal;
     opacity: 0.25;
+    padding-left: 25px;
+}
+.copyicon{
+    padding-right: 28px;
 }

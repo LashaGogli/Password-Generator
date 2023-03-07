@@ -188,26 +188,322 @@ function generatePassword(length) {
     let password = "";
 
 
-    do {
-        password="";
-        for (let i = 0; i < length; i++) {
+    if (firstcheckbox.checked && secondcheckbox.checked && thirdcheckbox.checked && fourthcheckbox.checked) {
 
-            const randomCharType = Math.floor(Math.random() * 4);
-            if (randomCharType === 0) {
-                password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
-                checkUppercase++;
-            } else if (randomCharType === 1) {
-                password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
-                checkLowcase++;
-            } else if (randomCharType === 2) {
-                password += numbers.charAt(Math.floor(Math.random() * numbers.length));
-                checkNumbers++;
-            } else {
-                password += symbols.charAt(Math.floor(Math.random() * symbols.length));
-                checkSymbols++;
+
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
             }
-        }
-    } while (checkUppercase == 0 || checkLowcase == 0 || checkNumbers == 0 || checkSymbols == 0);
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 4);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else if (randomCharType === 1) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                } else if (randomCharType === 2) {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkUppercase == 0 || checkLowcase == 0 || checkNumbers == 0 || checkSymbols == 0);
+    }
+    else if (firstcheckbox.checked && secondcheckbox.checked && thirdcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 3);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else if (randomCharType === 1) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                } else {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                }
+            }
+        } while (checkUppercase == 0 || checkLowcase == 0 || checkNumbers == 0);
+
+    } else if (firstcheckbox.checked && secondcheckbox.checked && fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 3);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else if (randomCharType === 1) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkUppercase == 0 || checkLowcase == 0 || checkSymbols == 0);
+
+    } else if (firstcheckbox.checked && thirdcheckbox.checked && fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 3);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else if (randomCharType === 1) {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkUppercase == 0 || checkNumbers == 0 || checkSymbols == 0);
+
+    }
+    else if (secondcheckbox.checked && thirdcheckbox.checked && fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 3);
+                if (randomCharType === 0) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                } else if (randomCharType === 1) {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkLowcase == 0 || checkNumbers == 0 || checkSymbols == 0);
+
+    } else if (firstcheckbox.checked && secondcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 2);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                }
+            }
+        } while (checkUppercase == 0 || checkLowcase == 0);
+
+    } else if (firstcheckbox.checked && thirdcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 2);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                }
+            }
+        } while (checkUppercase == 0 || checkNumbers == 0);
+
+    } else if (firstcheckbox.checked && fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 2);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkUppercase == 0 || checkSymbols == 0);
+
+    } else if (secondcheckbox.checked && thirdcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 2);
+                if (randomCharType === 0) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                } else {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                }
+            }
+        } while (checkLowcase == 0 || checkNumbers == 0);
+
+    }
+    else if (secondcheckbox.checked && fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!"
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 2);
+                if (randomCharType === 0) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkLowcase == 0 || checkSymbols == 0);
+
+    }
+    else if (thirdcheckbox.checked && fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!";
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 2);
+                if (randomCharType === 1) {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                } else {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkNumbers == 0 || checkSymbols == 0);
+
+    } else if (firstcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!";
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 1);
+                if (randomCharType === 0) {
+                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+                    checkUppercase++;
+                }
+            }
+        } while (checkUppercase == 0);
+
+    }
+    else if (secondcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!";
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 1);
+                if (randomCharType === 0) {
+                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+                    checkLowcase++;
+                }
+            }
+        } while (checkLowcase == 0);
+
+    }
+    else if (thirdcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!";
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 1);
+                if (randomCharType === 0) {
+                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+                    checkNumbers++;
+                }
+            }
+        } while (checkNumbers == 0);
+
+    }
+    else if (fourthcheckbox.checked) {
+        do {
+            password = "";
+            if (length == 0) {
+                password = "Can't be 0!";
+                break;
+            }
+            for (let i = 0; i < length; i++) {
+
+                let randomCharType = Math.floor(Math.random() * 1);
+                if (randomCharType === 0) {
+                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+                    checkSymbols++;
+                }
+            }
+        } while (checkSymbols == 0);
+
+    }
+
 
 
     return password;
@@ -225,5 +521,6 @@ let defaultpassword = document.querySelector(".defaultpassword");
 generate.addEventListener("click", function () {
     password = generatePassword(charLength);
     defaultpassword.innerHTML = password;
+
 })
 
