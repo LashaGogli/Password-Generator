@@ -32,8 +32,9 @@ h1 {
     height: 80px;
     background-color: #24232C;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
+    position: relative;
 
 }
 
@@ -216,7 +217,8 @@ input[type="checkbox"]:checked::before {
 }
 
 .defaultpassword {
-    height: 42px;
+    height: 100%;
+    width: 100%;
     font-family: 'JetBrains Mono';
     font-style: normal;
     font-weight: 700;
@@ -226,10 +228,17 @@ input[type="checkbox"]:checked::before {
     mix-blend-mode: normal;
     opacity: 0.25;
     padding-left: 25px;
+    background-color: black;
+    position: absolute;
+    border: none;
 }
 
 .copyicon {
-    padding-right: 28px;
+    padding-left: 492px;
+    position: absolute;
+}
+.copyicon:hover {
+    cursor: pointer;
 }
 
 .strengthcheckdiv {

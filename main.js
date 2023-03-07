@@ -23,7 +23,7 @@ firstcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
         strengthcheckP.innerHTML = "";
-        
+
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
@@ -53,7 +53,7 @@ firstcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
         strengthcheckP.innerHTML = "STRONG";
-        
+
 
     }
 
@@ -68,7 +68,7 @@ secondcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
         strengthcheckP.innerHTML = "";
-        
+
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
@@ -98,7 +98,7 @@ secondcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
         strengthcheckP.innerHTML = "STRONG";
-        
+
 
     }
 });
@@ -112,7 +112,7 @@ thirdcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
         strengthcheckP.innerHTML = "";
-        
+
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
@@ -142,7 +142,7 @@ thirdcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
         strengthcheckP.innerHTML = "STRONG";
-        
+
 
     }
 
@@ -157,7 +157,7 @@ fourthcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#18171F";
         div4.style.backgroundColor = "#18171F";
         strengthcheckP.innerHTML = "";
-        
+
 
     } else if (countstrength == 1) {
         div1.style.backgroundColor = "#F64A4A";
@@ -187,7 +187,7 @@ fourthcheckbox.addEventListener("click", function () {
         div3.style.backgroundColor = "#A4FFAF";
         div4.style.backgroundColor = "#A4FFAF";
         strengthcheckP.innerHTML = "STRONG";
-        
+
 
     }
 });
@@ -549,7 +549,20 @@ let defaultpassword = document.querySelector(".defaultpassword");
 
 generate.addEventListener("click", function () {
     password = generatePassword(charLength);
-    defaultpassword.innerHTML = password;
+    defaultpassword.value = password;
 
 })
+
+
+
+let copyicon = document.querySelector(".copyicon");
+
+
+
+
+
+copyicon.addEventListener("click", function () {
+    defaultpassword.select();
+    navigator.clipboard.writeText(defaultpassword.value);
+  });
 
