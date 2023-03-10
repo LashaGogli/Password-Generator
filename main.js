@@ -193,7 +193,7 @@ fourthcheckbox.addEventListener("click", function () {
 });
 
 let rangeInput = document.querySelector("#rangeInput");
-let charLength = 0;
+let charLength = 4;
 let span0 = document.querySelector(".span0");
 
 
@@ -218,40 +218,38 @@ function generatePassword(length) {
 
 
     if (firstcheckbox.checked && secondcheckbox.checked && thirdcheckbox.checked && fourthcheckbox.checked) {
-
-
         do {
-            password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
+          password = "";
+          checkUppercase = 0;
+          checkLowcase = 0;
+          checkNumbers = 0;
+          checkSymbols = 0;
+          for (let i = 0; i < length; i++) {
+            let randomCharType = Math.floor(Math.random() * 4);
+            if (randomCharType === 0) {
+              password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
+              checkUppercase++;
+            } else if (randomCharType === 1) {
+              password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
+              checkLowcase++;
+            } else if (randomCharType === 2) {
+              password += numbers.charAt(Math.floor(Math.random() * numbers.length));
+              checkNumbers++;
+            } else {
+              password += symbols.charAt(Math.floor(Math.random() * symbols.length));
+              checkSymbols++;
             }
-            for (let i = 0; i < length; i++) {
-
-                let randomCharType = Math.floor(Math.random() * 4);
-                if (randomCharType === 0) {
-                    password += uppercaseLetters.charAt(Math.floor(Math.random() * uppercaseLetters.length));
-                    checkUppercase++;
-                } else if (randomCharType === 1) {
-                    password += lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
-                    checkLowcase++;
-                } else if (randomCharType === 2) {
-                    password += numbers.charAt(Math.floor(Math.random() * numbers.length));
-                    checkNumbers++;
-                } else {
-                    password += symbols.charAt(Math.floor(Math.random() * symbols.length));
-                    checkSymbols++;
-                }
-            }
+          }
         } while (checkUppercase == 0 || checkLowcase == 0 || checkNumbers == 0 || checkSymbols == 0);
-    }
+      }
+      
     else if (firstcheckbox.checked && secondcheckbox.checked && thirdcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 3);
@@ -271,10 +269,10 @@ function generatePassword(length) {
     } else if (firstcheckbox.checked && secondcheckbox.checked && fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 3);
@@ -294,10 +292,10 @@ function generatePassword(length) {
     } else if (firstcheckbox.checked && thirdcheckbox.checked && fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 3);
@@ -318,10 +316,10 @@ function generatePassword(length) {
     else if (secondcheckbox.checked && thirdcheckbox.checked && fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 3);
@@ -341,10 +339,10 @@ function generatePassword(length) {
     } else if (firstcheckbox.checked && secondcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 2);
@@ -361,10 +359,10 @@ function generatePassword(length) {
     } else if (firstcheckbox.checked && thirdcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 2);
@@ -381,10 +379,10 @@ function generatePassword(length) {
     } else if (firstcheckbox.checked && fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 2);
@@ -401,10 +399,10 @@ function generatePassword(length) {
     } else if (secondcheckbox.checked && thirdcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 2);
@@ -422,10 +420,10 @@ function generatePassword(length) {
     else if (secondcheckbox.checked && fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!"
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 2);
@@ -443,10 +441,10 @@ function generatePassword(length) {
     else if (thirdcheckbox.checked && fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!";
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 2);
@@ -463,10 +461,10 @@ function generatePassword(length) {
     } else if (firstcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!";
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 1);
@@ -481,10 +479,10 @@ function generatePassword(length) {
     else if (secondcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!";
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 1);
@@ -499,10 +497,10 @@ function generatePassword(length) {
     else if (thirdcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!";
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 1);
@@ -517,10 +515,10 @@ function generatePassword(length) {
     else if (fourthcheckbox.checked) {
         do {
             password = "";
-            if (length == 0) {
-                password = "Can't be 0!";
-                break;
-            }
+            checkUppercase = 0;
+            checkLowcase = 0;
+            checkNumbers = 0;
+            checkSymbols = 0;
             for (let i = 0; i < length; i++) {
 
                 let randomCharType = Math.floor(Math.random() * 1);
