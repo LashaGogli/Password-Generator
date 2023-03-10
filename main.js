@@ -542,10 +542,12 @@ function generatePassword(length) {
 
 let generate = document.querySelector(".generate");
 let defaultpassword = document.querySelector(".defaultpassword");
+const clickSound = document.getElementById("click-sound");
 
 
 
 generate.addEventListener("click", function () {
+    clickSound.play();
     password = generatePassword(charLength);
     defaultpassword.value = password;
     defaultpassword.style.opacity = "1";
